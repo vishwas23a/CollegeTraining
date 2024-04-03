@@ -1,0 +1,50 @@
+body{
+    background-color: #CFD8DC;
+}
+h2{
+    color: green;
+    display: flex;
+    justify-content: center;
+}
+.kiet{
+    color: yellow;
+    justify-content: center;
+    display: flex;
+    
+}
+.full{
+    color: orangered;
+    text-align: center;
+    text-decoration: underline overline;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-size: initial;
+    text-transform: uppercase;
+    background-color: purple;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para2{
+    margin-left:40px ;
+    text-align: justify;
+    text-indent: 40px;
+}
+span{
+    margin-left: 50px;
+    margin-top: 3px;
+    border: 1px solid red;
+    font-size: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    width: 70px;
+}
+span:hover{
+    background-color: goldenrod;
+    color: white;
+}

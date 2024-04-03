@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+
+body{
+    background-image: url("logo1.png");
+    background-repeat:no-repeat ;
+    background-position:right center;
+    background-size: inherit;
+}
+        td,th{
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color: aqua;
+        }
+        tr:nth-child(even){
+            background-color: gold;
+
+            
+        }
+        tr:hover{
+            background-color: rgb(201, 36, 36);
+            
+        }
+        .but{
+            border:1px solid blue ;
+            width: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: blue;
+            border-radius: 4px;
+
+            cursor: pointer;
+            margin: 10px;
+        }
+        .but a{
+            color: blue;
+            text-decoration: none;
+            
+        }
+       
+        .but:hover{
+            background-color: blue;
+            color: white;
+            border: 1px solid white;
+            box-shadow: 0px 3px 5px 1px blue;
+
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <h1>student Information</h1>
+    <table border="1" style="border-collapse: collapse; border: 2px solid red;">
+        <tr> 
+            <td  rowspan="6">
+                MCA Department
+            </td>
+        </tr>
+        
+        
+    <tr>
+       
+        <th>Roll no.</th>
+        <th>name</th>
+        <th>Course </th>
+        <th>Percentage</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Vishwas</td>
+        <td>MCA</td>
+        <td>90%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Vishwas</td>
+        <td>MCA</td>
+        <td>80%</td>
+      
+    <tr>
+        <td>2</td>
+        <td>Vishwas</td>
+        <td>MCA</td>
+        <td>80%</td>
+      
+    <tr>
+        <td>2</td>
+        <td>Vishwas</td>
+        <td>MCA</td>
+        <td>80%</td>
+      
+    </tr>
+    <!-- <a href="Form.html">
+        <button>Click</button>
+    </a> -->
+
+    <div class="but">
+        <a href="Form.html">Submit</a>
+            
+    </div>
+</table>
+</body>
+</html>
