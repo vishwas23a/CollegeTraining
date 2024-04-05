@@ -1,3 +1,10 @@
-let a=10;
-let b=10+a;
-console.log(b);
+let nam="satyam";
+switch(nam){
+    case "vishwas":console.log("KIET");break;
+    case "satyam ":console.log("rsmt");break;
+    default :console.log("vekar");break;
+}
+let i=0;
+while(i<10){
+    console.log(i++);
+}
