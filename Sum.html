@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum page</title>
+</head>
+<body>
+    <h1> Sum Calculation</h1>
+    <p id="para"> </p>
+    <button id="sum"> Calculate</button>
+    <script>
+
+
+
+
+        const Para= document.getElementById("para")
+        const Sum= document.getElementById("sum")
+        let oldData=document.getElementById("para").innerHTML;
+        Sum.addEventListener("click",function(){
+                let num1=prompt("enter 1st Number")
+                let num2 =prompt("enter 2nd number")
+                let sum=parseInt(num1)+parseInt(num2);
+                let result=`the sum of ${num1} and ${num2} is :- ${sum}`
+                document.getElementById("para").innerHTML=oldData+result
+                
+
+                console.log("click");
+
+        })
+
+    </script>
+</body>
+</html>

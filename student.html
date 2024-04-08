@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="d-flex justify-content-center mb-2 ">
+
+    <h1> Student Resgistraion</h1>
+
+</div>
+<div class="border border-1 border-danger col-3 container p-3 text-start rounded ">
+<form onsubmit="return validate();" name="studentForm">
+<div class="mt-2">
+    <label >Enter Name</label><br>
+    <input type="text " id="name" name="name" class="col-12" placeholder="Name" >
+    <p id="nameError" class=" text-danger"></p>
+
+</div>
+<div class="mt-3">
+    <label>Enter Mobile Number</label><br>
+    <input type="number" id="number" name="number" maxlength="12" class="col-12" placeholder="Number">
+    <p id="mobileError" class=" text-danger"></p>
+
+</div>
+<div class="mt-3">
+    <label >Enter Email</label><br>
+    <input type="email" id="email" name="email" class="col-12" placeholder="Email">
+    <p id="emailError" class=" text-danger"></p>
+
+</div>
+<div class="mt-3 border border-1 border-primary  rounded p-4" >
+    <label>select Hobbies</label><br>
+    <label for="dance"><input type="checkbox" id="dance" name="hobbies"  value="Music">Dancing</label><br>
+  <label for="sports"> <input type="checkbox" id="sports" name="hobbies" value="Sports"  >Sports</label>  <br>
+  <label for="travell"> <input type="checkbox" id="travell" name="hobbies" value="Singing"  >Travelling</label> 
+    <p id="hobbieError" class=" text-danger"></p>
+
+</div>
+<div class="mt-3 ">
+    <select name="lang" >
+        <label >Select your Language</label>
+
+        <option value="Select"/>Select</option>
+        <option value="Java"/>Java</option>
+        <option value="Kotlin"/>Kotlin</option>
+        <option value="JavaScript"/>JavaScript</option>
+    </select>
+    <p id="selectError" class=" text-danger"></p>
+
+</div>
+<div>
+
+    <button type="submit" class="btn btn-outline-primary" > Submit</button>
+    <button type="reset" class="btn btn-outline-primary"> clear</button>
+</div>
+
+</form>
+
+</div>
+    
+
+
+    <script src="Student.js" >
+
+    </script>
+</body>
+</html>

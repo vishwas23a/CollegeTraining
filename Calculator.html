@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Calculator</title>
+</head>
+<body class="flex justify-center flex-col items-center h-screen ">
+    <div class="d-flex justify-content-center">
+        <h1 class="">Calculator</h1>
+    </div>
+ 
+    <div class=" border-2 border-sky-600 bg-gray-800 rounded-md h-4/5 w-80 flex justify-center flex-col items center mt-2"  >
+
+
+        <div class="p-4 flex ">
+            <input type="text" id="input" class=" w-full p-3 rounded " >
+        </div>
+
+        <div class="flex w-full h-80  justify-evenly flex-wrap " id="but" >
+            <button value="1" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white" onclick="fun(value)">1</button>
+            <button value="2" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white " onclick="fun(value)">2</button>
+            <button value="3" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white" onclick="fun(value)">3</button>
+            <button value="4" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white" onclick="fun(value)">4</button>
+            <button value="5" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white "onclick="fun(value)">5</button>
+            <button value="6" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">6</button>
+            <button value="7" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">7</button>
+            <button value="8" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">8</button>
+            <button value="9" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">9</button>
+            <button value="0" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">0</button>
+            <button value="." class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">.</button>
+
+            <button value="+" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white "onclick="fun(value)">+</button>
+            <button value="-" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">-</button>
+            <button value="*" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="fun(value)">*</button>
+            <button value="%" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white "onclick="fun(value)">%</button>
+            <button value="=" class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white"onclick="result(value)">=</button>
+            <button value =""  class="bg-sky-500  w-20 h-10 rounded text-white mt-2 hover:text-sky-500 hover:bg-white" onclick="inputClear()"> AC</button>
+        </div>
+    </div>
+
+
+    <script> 
+    
+        const input=document.getElementById("input");
+        const but=document.getElementById("but")
+        const fun=(value)=>{
+            input.value+=value;
+            console.log(input.value);
+        }
+
+
+        const result=()=>{
+
+            try{
+                input.value=eval(input.value)
+             
+            }
+            catch{
+                input.value="error"
+            }
+
+
+        }
+            const inputClear=()=>{
+                input.value=""
+            }
+  </script>
+</body>
+</html>

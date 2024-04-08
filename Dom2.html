@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom</h1>
+    <p id="para"> chnage</p>
+    <p id="msg" > </p>
+
+    <button onmouseover="change()" onmouseout="remove()">change</button>
+    <button onclick="go()">go</button>
+    <button id="alert" name="openmessage" value="buutton">display</button>
+
+    <script>
+
+    const button=document.getElementById("alert")
+    const msg=document.getElementById("msg")
+
+    button.addEventListener("click",function (e) {
+        // e.preventDefault();
+       msg.innerHTML=e.target.value
+        console.log("click");
+    })
+
+const remove=()=>{
+    document.getElementById("para").innerHTML="removed"
+}
+        const change=()=>{
+            document.getElementById("para").innerHTML="<h1>para graph changed</h1>"
+            document.getElementById("para").innerHTML=window.location.origin
+        }
+
+const go =()=>{
+        window.open("https://www.google.com")
+}
+    </script>
+</body>
+</html>
