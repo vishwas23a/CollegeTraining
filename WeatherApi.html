@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .cardContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      background-color: rgb(54, 53, 53);
+    }
+    .card {
+      border: 1px solid white;
+      padding: 20px;
+      background-color: rgb(105, 105, 105);
+      color: white;
+      border-radius: 10px;
+    }
+
+    .input {
+      display: flex;
+      gap: 3px;
+    }
+    .input input {
+      width: 150px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid blue;
+    }
+    input:hover {
+      border: 3px solid rgba(85, 85, 203, 0.808);
+    }
+    button {
+      border: 1px solid rgb(42, 42, 242);
+      border-radius: 5px;
+      width: 70px;
+      background-color: rgb(42, 42, 242);
+      color: white;
+    }
+    button:hover {
+      background-color: white;
+      color: rgb(42, 42, 242);
+      cursor: pointer;
+    }
+    p{
+        display: flex;
+        justify-content: space-between;
+    }
+  </style>
+  <body>
+    <div class="cardContainer">
+      <div class="card">
+        <div class="input">
+          <input type="text" id="input" placeholder="City name" />
+          <button onclick="fun()">search</button>
+        </div>
+
+        <p class="city">Address:- <span id="city"></span></p>
+        <p class="weather">Condition : - <span id="condition"></span></p>
+        <p>Time :- <span id="time"></span></p>
+        <p class="temp">Temprature:- <span id="temp"></span></p>
+        <p>Wind Speed:- <span id="windSpeed"></span></p>
+        <p>visibility:- <span id="visible"></span></p>
+      </div>
+    </div>
+
+    <script>
+      const fun = () => {
+        const input = document.getElementById("input");
+        const cityName = document.getElementById("city");
+        const cityCondition = document.getElementById("condition");
+        const cityTime = document.getElementById("time");
+        const cityTemp = document.getElementById("temp");
+        const windSpeed = document.getElementById("windSpeed");
+        const visibility = document.getElementById("visible");
+
+        console.log(input.value);
+        const weather = input.value;
+
+        fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${weather}?unit
+ Group=metric&include=current&key=JBZZ8RA3X5L97WTVYS8PQ3RWP&contentType=json`)
+          .then((data) => data.json())
+          .then((data) => {
+            console.log(data);
+            cityName.innerHTML = data.resolvedAddress;
+            cityCondition.innerHTML = data.currentConditions.conditions;
+            cityTime.innerHTML = data.currentConditions.datetime;
+            cityTemp.innerHTML = `${Math.floor(
+              ((data.currentConditions.temp - 32) * 5) / 9
+            )}°C `;
+            windSpeed.innerHTML = ` ${data.currentConditions.windspeed}`;
+            visibility.innerHTML = `${data.currentConditions.visibility}`;
+          });
+      };
+    </script>
+  </body>
+</html>
